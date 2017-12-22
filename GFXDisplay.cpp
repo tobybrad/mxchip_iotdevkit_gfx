@@ -13,26 +13,36 @@ void GFXDisplay::clear()
 
 void GFXDisplay::flush()
 {
+  // Copy the back buffer to screen
   draw(0, 0, 128, 8, _buffer);
 }
 
 void GFXDisplay::setPixel(int x, int y)
 {
+  // Simple clipping
   if (x < 0 || x >= WIDTH || y < 0 || y > HEIGHT)
     return;
 
+  // Calc the byte idx we're going to update
   int _byte = x + ((y >> 3) * WIDTH);
+
+  // Appears to be either a driver or firmware bug whereby byte 127 is written to column
+  // 0 on the display and everything else is shifted up one (so byte 0 is col 1 etc)
+  // Fix that here.. 
   if (_byte % 128 == 0) {
     _byte += 127;
   }
   else {
     _byte -= 1;
   }
+
+  // Set the corresponding bit
   _buffer[_byte] |= 0x01 << (y % 8);
 }
 
 void GFXDisplay::drawText(int x, int y, const char *s)
 {
+  // Font definition from front.h. Just replace to use a different font
   while (*s != 0) {
     char *c = font[(*s) - 0x20];
     for (int _y = 0; _y < FONT_HEIGHT; _y++) {
@@ -90,6 +100,9 @@ void GFXDisplay::drawCircle(int xm, int ym, int r)
 
 void GFXDisplay::drawBitmap(int x, int y, int w, int h, const byte *bmp)
 {
+  // bmp is an array of 0's and 1's *not* RGB values
+  // We definitely could be more efficient here
+
   for (int i = 0; i < w * h; i++) {
     if (bmp[i]) {
       setPixel(x + (i % w), y + (i / w));

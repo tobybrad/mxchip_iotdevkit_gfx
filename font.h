@@ -1,6 +1,18 @@
 #ifndef __FONT_H__
 #define __FONT_H__
 
+/*
+ * // Summary: font8x8.h
+ * // 8x8 monochrome bitmap fonts for rendering
+ * //
+ * // Author:
+ * //     Marcel Sondaar
+ * //     International Business Machines (public domain VGA fonts)
+ * //
+ * // License:
+ * //     Public Domain
+ */
+
 const int FONT_WIDTH = 8;
 const int FONT_HEIGHT = 8;
 
