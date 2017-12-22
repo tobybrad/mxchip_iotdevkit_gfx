@@ -22,16 +22,23 @@ void loop() {
 
     int HDR_HEIGHT = 16;
 
+    // Border round header (yellow) area
     display.drawRect(0, 0, display.WIDTH - 1, HDR_HEIGHT - 1);
+
+    // Border round main (blue) area
     display.drawRect(0, HDR_HEIGHT, display.WIDTH - 1, display.HEIGHT - 1);
-  
+
+    // Draw a big 'X' across main area 
     display.drawLine(x, HDR_HEIGHT, display.WIDTH - x, display.HEIGHT);
     display.drawLine(display.WIDTH - x, HDR_HEIGHT, x, display.HEIGHT);
 
+    // Circle centred in the main area
     display.drawCircle(display.WIDTH / 2, (HDR_HEIGHT + display.HEIGHT) / 2, 16);
 
+    // Show a message in the header area
     display.drawText(x, (HDR_HEIGHT / 2) - (display.FONT_HEIGHT / 2), msg);
 
+    // Bitmap on lhs    
     int BITMAP_WIDTH = 35;
     int BITMAP_HEIGHT = 16;
     
@@ -41,6 +48,7 @@ void loop() {
       msft_azure
     );
 
+    // Bitmap on rhs
     BITMAP_WIDTH = 19;
     BITMAP_HEIGHT = 20;
 
