@@ -1,0 +1,27 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "C:\\Users\\%USERNAME%\\AppData\\Local\\Arduino15\\packages\\AZ3166\\hardware\\stm32f4\\1.2.1\\cores\\arduino",
+                "C:\\Users\\%USERNAME%\\AppData\\Local\\Arduino15\\packages\\AZ3166\\tools\\arm-none-eabi-gcc\\5_4-2016q3\\arm-none-eabi\\include",
+                "C:\\Users\\%USERNAME%\\AppData\\Local\\Arduino15\\packages\\AZ3166\\tools\\arm-none-eabi-gcc\\5_4-2016q3\\arm-none-eabi\\include\\c++\\5.4.1",
+                "C:\\Users\\%USERNAME%\\AppData\\Local\\Arduino15\\packages\\AZ3166\\tools\\arm-none-eabi-gcc\\5_4-2016q3\\arm-none-eabi\\include\\c++\\5.4.1\\arm-none-eabi\\armv7e-m",
+                "C:\\Users\\%USERNAME%\\AppData\\Local\\Arduino15\\packages\\AZ3166\\tools\\arm-none-eabi-gcc\\5_4-2016q3\\lib\\gcc\\arm-none-eabi\\5.4.1\\include",
+                "C:\\Users\\%USERNAME%\\AppData\\Local\\Arduino15\\packages\\AZ3166\\hardware\\stm32f4\\1.2.1\\cores\\arduino\\system",
+                "C:\\Users\\%USERNAME%\\AppData\\Local\\Arduino15\\packages\\AZ3166\\hardware\\stm32f4\\1.2.1\\system\\targets\\TARGET_STM\\TARGET_STM32F4",
+                "C:\\Users\\%USERNAME%\\AppData\\Local\\Arduino15\\packages\\AZ3166\\hardware\\stm32f4\\1.2.1\\system\\targets\\TARGET_MXCHIP\\TARGET_AZ3166",
+                "C:\\Users\\%USERNAME%\\AppData\\Local\\Arduino15\\packages\\AZ3166\\hardware\\stm32f4\\1.2.1\\system\\targets\\TARGET_MXCHIP\\TARGET_AZ3166/device",
+                "C:\\Users\\%USERNAME%\\AppData\\Local\\Arduino15\\packages\\AZ3166\\hardware\\stm32f4\\1.2.1\\system"
+            ],
+            "browse": {
+                "limitSymbolsToIncludedHeaders": false,
+                "path": [
+                    "C:\\Users\\%USERNAME%\\AppData\\Local\\Arduino15\\packages\\AZ3166\\hardware\\stm32f4\\1.2.1\\cores\\arduino"
+                ]
+            },
+            "intelliSenseMode": "msvc-x64"
+        }
+    ],
+    "version": 3
+}
